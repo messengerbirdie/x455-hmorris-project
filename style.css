@@ -1,0 +1,44 @@
+body,
+h1 {
+  font-family: "Raleway", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.w3-row-padding img {
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+}
+
+.header-container {
+    padding: 10px;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-icons {
+    font-size: 24px;
+  }
+  
+  .logo {
+    margin: 0;
+  }
+  
+  footer i {
+    margin: 0 15px; /* horizontal space between icons */
+    padding: 10px;  /* optional: space inside each icon */
+    font-size: 24px; /* optional: make icons larger */
+  }
+  
