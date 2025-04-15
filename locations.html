@@ -1,31 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>SKN+BOD</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Raleway"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <style>
-      body,
-      h1 {
-        font-family: "Raleway", Arial, sans-serif;
-      }
-      h1 {
-        letter-spacing: 6px;
-      }
-      .w3-row-padding img {
-        margin-bottom: 0;
-      }
-    </style>
-  </head>
+<head>
+  <title>SKN+BOD</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <style>
+    body, h1 {
+      font-family: "Raleway", Arial, sans-serif;
+    }
+
+    h1 {
+      letter-spacing: 6px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      letter-spacing: 2px;
+    }
+
+    .w3-row-padding img {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+  
   <body>
     <!-- PAGE CONTENT -->
     <div class="w3-content" style="max-width: 100%">
@@ -62,7 +63,7 @@
             >
             <a
               href="locations.html"
-              class="w3-bar-item w3-button w3-hover-text-teal"
+              class="w3-bar-item w3-button w3-text-teal"
               >Locations</a
             >
             <a
@@ -80,85 +81,81 @@
       </header>
 
     <!-- Locations -->
-    <!DOCTYPE html>
-<html>
 <head>
-  <title>Locations</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
-  <style>
-    body {
-      font-family: "Raleway", sans-serif;
-    }
+  <div class="w3-container w3-center">
+    <h2>Locations</h2>
+  </div>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+      <style>
+        body {
+          font-family: "Arial", sans-serif;
+        }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-      padding: 32px;
-    }
+        .container {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          max-width: 1200px;
+          margin: auto;
+          padding: 32px;
+        }
 
-    .carousel {
-      position: relative;
-      width: 500px;
-    }
+        .carousel {
+          position: relative;
+          width: 500px;
+        }
 
-    .carousel input {
-      display: none;
-    }
+        .carousel input {
+          display: none;
+        }
 
-    .slide {
-      display: none;
-      width: 100%;
-      height: auto;
-    }
+        .slide {
+          display: none;
+          width: 100%;
+          height: auto;
+        }
 
-    #slide1:checked ~ .s1,
-    #slide2:checked ~ .s2,
-    #slide3:checked ~ .s3 {
-      display: block;
-    }
+        #slide1:checked ~ .s1,
+        #slide2:checked ~ .s2,
+        #slide3:checked ~ .s3 {
+          display: block;
+        }
 
-    .nav-dots {
-      text-align: center;
-      margin-top: 10px;
-    }
+        .nav-dots {
+          text-align: center;
+          margin-top: 10px;
+        }
 
-    .nav-dots label {
-      cursor: pointer;
-      padding: 6px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-    }
+        .nav-dots label {
+          cursor: pointer;
+          padding: 6px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+        }
 
-    .nav-dots label:hover {
-      background-color: #717171;
-    }
+        .nav-dots label:hover {
+          background-color: #717171;
+        }
 
-    .text-box {
-      width: 500px;
-      height: 333px; /* match typical 3:2 image aspect ratio */
-      overflow-y: scroll;
-      border: 1px solid #ccc;
-      padding: 16px;
-      box-sizing: border-box;
-      background-color: #f9f9f9;
-    }
-  </style>
-</head>
-<body>
+        .text-box {
+          width: 500px;
+          height: 333px; /* match typical 3:2 image aspect ratio */
+          overflow-y: scroll;
+          border: 1px solid #ccc;
+          padding: 16px;
+          box-sizing: border-box;
+          background-color: #f9f9f9;
+        }
+      </style>
+    </head>
+    <body>
 
-<div class="w3-container w3-center">
-  <h2>Locations</h2>
-</div>
-
-<div class="container">
+    <div class="container">
   <!-- Carousel -->
   <div class="carousel">
     <input type="radio" name="slider" id="slide1" checked>
