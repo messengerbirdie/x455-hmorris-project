@@ -76,134 +76,148 @@
     </div>
   </div>
 </header>
+<!-- About Section -->
+<div class="w3-container w3-center" style="margin-top: 50px;">
+  <h2>Testimonials</h2>
+</div>
 
-      <!-- About Section -->
-      <div class="w3-container w3-center" style="margin-top: 50px;">
-        <h2>Testimonials</h2>
-      </div>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Two Columns with Images, Button, and Text</title>
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-            }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Two Columns with Images, Button, and Text</title>
 
-            .container {
-              display: flex;
-              justify-content: space-between;
-              margin-top: 20px;
-              padding: 90px;
-            }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-            .column {
-              width: 40%;
-              margin: 1px;
-            }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 5%;
+    gap: 40px;
+  }
 
-            .column img {
-              width: 40%;
-              height: auto;
-              float: left;
-              margin-right: 20px;
-            }
+  .column {
+    flex: 0 1 48%;
+    box-sizing: border-box;
+  }
 
-            .button {
-              margin-top: 20px;
-              display: inline-block;
-              background-color: #ccbed3;
-              text-align: center;
-              border: none;
-              cursor: pointer;
-              text-decoration: none;
-              color: white;
-              padding: 8px 12px;
-              margin-top: 10px;
-              border-radius: 4px;
-            }
+  .column img {
+    width: 40%;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 6px;
+  }
 
-            .button:hover {
-              background-color: #ccbed3;
-            }
+  .button {
+    display: inline-block;
+    background-color: #ccbed3;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
 
-            .text {
-              margin-top: 25px;
-              text-align: justify;
-            }
-          </style>
-        </head>
+  .button:hover {
+    background-color: #b0a2b8;
+  }
 
-        <body>
-          <div class="container">
-            <!-- Column 1 -->
-            <div class="column">
-              <img src="Images/Testimonial 1.jpg" alt="Image 1" />
-              <a href="https://www.allure.com/sponsored/story/keys-soulcare-clean-beauty-complete-soulcare-ritual-set-review-photos" class="button"
-                >Read About Her Full Skin Transformation</a
-              >
-              <p class="text">
-                I had the most amazing experience at SKN+BOD Aesthetics in the
-                beautiful Sierras. From the moment I stepped through the door, I
-                felt instantly relaxed and welcomed. Sally, the aesthetician,
-                was so professional and knowledgeable, taking the time to listen
-                to my concerns and tailor the treatment to my skin’s unique
-                needs. She explained every step of the process, making me feel
-                comfortable and confident in her care. After my session, my skin
-                looked and felt rejuvenated, glowing in a way I hadn’t seen in
-                years. The tranquil setting of SKN+BOD, with its peaceful
-                mountain views, only added to the overall experience. I can’t
-                recommend Sally and SKN+BOD Aesthetics enough—it’s a true gem in
-                Northern California!
-              </p>
-            </div>
+  .text {
+    text-align: justify;
+    margin-top: 10px;
+  }
 
-            <!-- Column 2 -->
-            <div class="column">
-              <img src="Images/Testimonial 2.jpg" />
-              <a href="https://info.eminenceorganics.com/skin-care-routine" class="button">Get the Full Routine</a>
-              <p class="text">
-                I had the most incredible experience at SKN+BOD Aesthetics in
-                the Sierras. From the moment I arrived, Sally made me feel like
-                I was in good hands. Her warm, welcoming demeanor immediately
-                put me at ease, and her expertise was evident throughout my
-                entire treatment. She took the time to assess my skin and
-                customize the facial to address my specific concerns. Sally’s
-                attention to detail was unmatched, and I left feeling completely
-                refreshed with glowing, revitalized skin. The peaceful, serene
-                atmosphere of SKN+BOD, surrounded by the beauty of the
-                mountains, made it a truly relaxing escape. I can’t recommend
-                Sally and SKN+BOD Aesthetics enough—it’s the perfect retreat for
-                anyone looking to pamper themselves and enhance their skin’s
-                natural beauty.
-              </p>
-            </div>
-          </div>
-          <style>
-            .video-row {
-              display: flex;
-              justify-content: space-between;
-              flex-wrap: wrap;
-              gap: 20px;
-              margin: 20px;
-            }
-        
-            .video-row iframe {
-              flex: 1;
-              min-width: 300px;
-              max-width: 32%;
-              aspect-ratio: 16 / 9;
-            }
-          </style>
-        </head>
-        <body>
-        
-          <h2 style="text-align:center;">Additional Resources</h2>
-        
-          <div class="video-row">
-            <iframe src="https://www.youtube.com/embed/7lVZbASHd8Y" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/WDU2uM2qaQ8" frameborder="0" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/fzQxpIY8t6E" frameborder="0" allowfullscreen></iframe>
-          </div>        
+  /* Mobile responsive */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+
+    .column {
+      width: 100%;
+    }
+
+    .column img {
+      float: none;
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 100%;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <!-- Column 1 -->
+    <div class="column">
+      <img src="Images/Testimonial 1.jpg" alt="Image 1" />
+      <a href="https://www.allure.com/sponsored/story/keys-soulcare-clean-beauty-complete-soulcare-ritual-set-review-photos" class="button">
+        Read About Her Full Skin Transformation
+      </a>
+      <p class="text">
+        I had the most amazing experience at SKN+BOD Aesthetics in the beautiful Sierras. From the moment I stepped through the door, I felt instantly relaxed and welcomed. Sally, the aesthetician, was so professional and knowledgeable, taking the time to listen to my concerns and tailor the treatment to my skin’s unique needs. She explained every step of the process, making me feel comfortable and confident in her care. After my session, my skin looked and felt rejuvenated, glowing in a way I hadn’t seen in years. The tranquil setting of SKN+BOD, with its peaceful mountain views, only added to the overall experience. I can’t recommend Sally and SKN+BOD Aesthetics enough—it’s a true gem in Northern California!
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="column">
+      <img src="Images/Testimonial 2.jpg" alt="Image 2" />
+      <a href="https://info.eminenceorganics.com/skin-care-routine" class="button">Get the Full Routine</a>
+      <p class="text">
+        I had the most incredible experience at SKN+BOD Aesthetics in the Sierras. From the moment I arrived, Sally made me feel like I was in good hands. Her warm, welcoming demeanor immediately put me at ease, and her expertise was evident throughout my entire treatment. She took the time to assess my skin and customize the facial to address my specific concerns. Sally’s attention to detail was unmatched, and I left feeling completely refreshed with glowing, revitalized skin. The peaceful, serene atmosphere of SKN+BOD, surrounded by the beauty of the mountains, made it a truly relaxing escape. I can’t recommend Sally and SKN+BOD Aesthetics enough—it’s the perfect retreat for anyone looking to pamper themselves and enhance their skin’s natural beauty.
+      </p>
+    </div>
+  </div>
+</body>
+
+       <!-- Videos -->
+<style>
+  .video-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .video-row iframe {
+    flex: 1 1 300px;
+    max-width: 32%;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media screen and (max-width: 768px) {
+    .video-row {
+      justify-content: center;
+    }
+
+    .video-row iframe {
+      max-width: 90%;
+    }
+  }
+</style>
+
+<h2 style="text-align:center;">Additional Resources</h2>
+
+<div class="video-row">
+  <iframe src="https://www.youtube.com/embed/7lVZbASHd8Y" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/WDU2uM2qaQ8" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/fzQxpIY8t6E" frameborder="0" allowfullscreen></iframe>
+</div>
 
         </body>
       </html>
