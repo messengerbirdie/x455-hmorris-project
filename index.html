@@ -4,6 +4,7 @@
     <title>SKN+BOD</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link
       rel="stylesheet"
@@ -30,54 +31,47 @@
     <!-- PAGE CONTENT -->
     <div class="w3-content" style="max-width: 100%">
     
-      <!-- Header -->
-      <header
-        class="w3-panel w3-center w3-blue-grey w3-large"
-        style="padding: 10px 10px"
-      >
-      <!-- Logo -->
-        <h1 class="w3-medium">
-          <img src="Images/SB Logo Wht.png" alt="SB Logo" style="width: 20%" />
-        </h1>
-      <!-- Navigation Bar -->
-        <div class>
-          <div
-            class="w3-bar"
-            style="display: flex; justify-content: space-between; gap: 1px"
-          >
-            <a
-              href="index.html"
-              class="w3-bar-item w3-button w3-text-teal"
-              >Home</a
-            >
-            <a
-              href="about.html"
-              class="w3-bar-item w3-button w3-hover-text-teal"
-              >About</a
-            >
-            <a
-              href="services.html"
-              class="w3-bar-item w3-button w3-hover-text-teal"
-              >Services</a
-            >
-            <a
-              href="locations.html"
-              class="w3-bar-item w3-button w3-hover-text-teal"
-              >Locations</a
-            >
-            <a
-              href="testimonials.html"
-              class="w3-bar-item w3-button w3-hover-text-teal"
-              >Testimonials</a
-            >
-            <a href="shop.html" class="w3-bar-item w3-button w3-hover-text-teal"
-              >Shop</a
-            >
-            <i class="fa fa-shopping-cart"></i>
-            <i class="fa fa-search"></i>
-          </div>
-        </div>
-      </header>
+<!-- Header -->
+<header class="w3-blue-grey w3-padding w3-large">
+  <!-- Logo -->
+  <div class="w3-center">
+    <h1 class="w3-medium">
+      <img id="logo" src="Images/SB Logo Wht.png" alt="SB Logo" style="width: 20%" />
+    </h1>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <div class="w3-bar w3-center w3-hide-small" style="display: flex; justify-content: center; gap: 8px;">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-teal">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hover-text-teal">About</a>
+    <a href="services.html" class="w3-bar-item w3-button w3-hover-text-teal">Services</a>
+    <a href="locations.html" class="w3-bar-item w3-button w3-hover-text-teal">Locations</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button w3-hover-text-teal">Testimonials</a>
+    <a href="shop.html" class="w3-bar-item w3-button w3-hover-text-teal">Shop</a>
+    <i class="fa fa-shopping-cart w3-bar-item w3-button"></i>
+    <i class="fa fa-search w3-bar-item w3-button"></i>
+  </div>
+
+  <!-- Hamburger icon (mobile only) -->
+  <div class="w3-hide-medium w3-hide-large w3-center">
+    <button class="w3-button w3-block" onclick="toggleMobileMenu()">
+      <i class="fa fa-bars"></i> Menu
+    </button>
+    <div id="mobileMenu" class="w3-bar-block w3-hide">
+      <a href="index.html" class="w3-bar-item w3-button w3-text-teal">Home</a>
+      <a href="about.html" class="w3-bar-item w3-button">About</a>
+      <a href="services.html" class="w3-bar-item w3-button">Services</a>
+      <a href="locations.html" class="w3-bar-item w3-button">Locations</a>
+      <a href="testimonials.html" class="w3-bar-item w3-button">Testimonials</a>
+      <a href="shop.html" class="w3-bar-item w3-button">Shop</a>
+      <div class="w3-bar-item">
+        <i class="fa fa-shopping-cart w3-margin-right"></i>
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
 
     <!-- Home Photo -->
       <div>
@@ -85,38 +79,40 @@
       </div>
 
     <!-- Footer -->
-    <footer
-      class="w3-container w3-padding-32 w3-grey"
-      style="display: flex; justify-content: space-between; align-items: center"
-    >
-      <!-- Contact Information on the Left -->
-      <div style="text-align: left">
+    <footer class="w3-container w3-padding-32 w3-grey responsive-footer">
+      <!-- Contact Information -->
+      <div class="footer-section" style="text-align: center;">
         <p>
           Contact Me: Sally Seashells <br />
           Email: sally@sknbod.com <br />
           Phone: 555.505.5555
         </p>
       </div>
-      <!-- Social Media Icons Centered -->
-      <div style="text-align: center">
-        <i
-          class="fa fa-facebook-official w3-hover-opacity"
-          style="margin-right: 20px"
-        ></i>
-        <i
-          class="fa fa-instagram w3-hover-opacity"
-          style="margin-right: 20px"
-        ></i>
-        <i
-          class="fa fa-envelope w3-hover-opacity"
-          style="margin-right: 20px"
-        ></i>
+    
+      <!-- Social Media Icons -->
+      <div class="footer-section" style="text-align: center;">
+        <i class="fa fa-facebook-official w3-hover-opacity" style="margin-right: 20px;"></i>
+        <i class="fa fa-instagram w3-hover-opacity" style="margin-right: 20px;"></i>
+        <i class="fa fa-envelope w3-hover-opacity" style="margin-right: 20px;"></i>
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
       </div>
-      <!-- Copyright Text -->
-      <div style="text-align: right">
+    
+      <!-- Copyright -->
+      <div class="footer-section" style="text-align: center;">
         <p>©2025 SKN+BOD Aesthetics</p>
       </div>
-    </footer>
+    </footer>    
   </body>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      if (menu.classList.contains("w3-show")) {
+        menu.classList.remove("w3-show");
+        menu.classList.add("w3-hide");
+      } else {
+        menu.classList.remove("w3-hide");
+        menu.classList.add("w3-show");
+      }
+    }
+  </script>  
 </html>

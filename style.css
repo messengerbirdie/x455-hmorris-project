@@ -53,4 +53,14 @@ img {
     padding: 10px;  /* optional: space inside each icon */
     font-size: 24px; /* optional: make icons larger */
   }
-  
+  /* Default logo size */
+#logo {
+  width: 20%;
+}
+
+/* Bigger logo on mobile */
+@media (max-width: 600px) {
+  #logo {
+    width: 60%;
+  }
+}
