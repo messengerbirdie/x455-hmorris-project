@@ -58,7 +58,7 @@
       <i class="fa fa-bars"></i> Menu
     </button>
     <div id="mobileMenu" class="w3-bar-block w3-hide">
-      <a href="index.html" class="w3-bar-item w3-button w3-text-teal">Home</a>
+      <a href="index.html" class="w3-bar-item w3-button">Home</a>
       <a href="about.html" class="w3-bar-item w3-button">About</a>
       <a href="services.html" class="w3-bar-item w3-button w3-text-teal">Services</a>
       <a href="locations.html" class="w3-bar-item w3-button">Locations</a>
@@ -71,136 +71,144 @@
     </div>
   </div>
 </header>
+<!-- Services Section -->
+<div class="w3-container w3-center" style="margin-top: 50px;">
+  <h2>Services</h2>
+</div>
 
-    <!-- Services Section -->
-      <div class="w3-container w3-center" style="margin-top: 50px;">
-        <h2>Services</h2>
-        <head>
-          <meta charset="UTF-8">
-          <title>Services - Sortable Table</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-    .w3-container {
-      padding: 20px;
-      text-align: center;
-    }
+  .w3-container {
+    padding: 20px;
+    text-align: center;
+  }
 
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 20px auto;
-      max-width: 95%;
-    }
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 20px auto;
+    max-width: 95%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+  }
 
+  th, td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  th:hover {
+    background-color: #e0e0e0;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  @media screen and (max-width: 600px) {
     th, td {
-      padding: 12px;
-      border: 1px solid #ddd;
+      font-size: 14px;
+      padding: 10px 8px;
+    }
+
+    .table-wrapper::before {
+      content: "Swipe → to scroll";
+      display: block;
+      font-size: 12px;
+      color: #666;
       text-align: left;
+      margin-bottom: 5px;
     }
+  }
+</style>
 
-    th {
-      background-color: #f2f2f2;
-      cursor: pointer;
-    }
-
-    th:hover {
-      background-color: #e0e0e0;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    @media screen and (max-width: 600px) {
-      th, td {
-        font-size: 14px;
-        padding: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Services Section -->
-  <div class="w3-container">
-    <div class="table-wrapper">
-      <table id="sortableTable">
-        <thead>
-          <tr>
-            <th onclick="sortTable(0)">Type ⬍</th>
-            <th onclick="sortTable(1)">Treatment ⬍</th>
-            <th onclick="sortTable(2)">Healing Time ⬍</th>
-            <th onclick="sortTable(3)">Consultation Required ⬍</th>
-            <th onclick="sortTable(4)">Starting Commitment ⬍</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Botox</td>
-            <td>Lines, wrinkles</td>
-            <td>1-3 Hours +</td>
-            <td>Yes</td>
-            <td>$50</td>
-          </tr>
-          <tr>
-            <td>Microdermabrasion</td>
-            <td>Rejuvination, smoothing, scarring</td>
-            <td>1-2 Days +</td>
-            <td>Yes</td>
-            <td>$250</td>
-          </tr>
-          <tr>
-            <td>Facials</td>
-            <td>Cleanse, exfoliate, extract, treat</td>
-            <td>3 Hours +</td>
-            <td>No</td>
-            <td>$150</td>
-          </tr>
-          <tr>
-            <td>Chemical Peel</td>
-            <td>Wrinkles, lines, texture, smoothing</td>
-            <td>7 Days +</td>
-            <td>No</td>
-            <td>$300</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="w3-container">
+  <div class="table-wrapper">
+    <table id="sortableTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Type ⬍</th>
+          <th onclick="sortTable(1)">Treatment ⬍</th>
+          <th onclick="sortTable(2)">Healing Time ⬍</th>
+          <th onclick="sortTable(3)">Consultation Required ⬍</th>
+          <th onclick="sortTable(4)">Starting Commitment ⬍</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Botox</td>
+          <td>Lines, wrinkles</td>
+          <td>1-3 Hours +</td>
+          <td>Yes</td>
+          <td>$50</td>
+        </tr>
+        <tr>
+          <td>Microdermabrasion</td>
+          <td>Rejuvenation, smoothing, scarring</td>
+          <td>1-2 Days +</td>
+          <td>Yes</td>
+          <td>$250</td>
+        </tr>
+        <tr>
+          <td>Facials</td>
+          <td>Cleanse, exfoliate, extract, treat</td>
+          <td>3 Hours +</td>
+          <td>No</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>Chemical Peel</td>
+          <td>Wrinkles, lines, texture, smoothing</td>
+          <td>7 Days +</td>
+          <td>No</td>
+          <td>$300</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>
 
-  <script>
-    function sortTable(columnIndex) {
-      const table = document.getElementById("sortableTable");
-      const rows = Array.from(table.rows).slice(1);
-      let ascending = table.getAttribute("data-sort-dir") !== "asc";
+<script>
+  function sortTable(columnIndex) {
+    const table = document.getElementById("sortableTable");
+    const rows = Array.from(table.rows).slice(1);
+    let ascending = table.getAttribute("data-sort-dir") !== "asc";
 
-      rows.sort((rowA, rowB) => {
-        let a = rowA.cells[columnIndex].textContent.trim().toLowerCase();
-        let b = rowB.cells[columnIndex].textContent.trim().toLowerCase();
+    rows.sort((rowA, rowB) => {
+      let a = rowA.cells[columnIndex].textContent.trim().toLowerCase();
+      let b = rowB.cells[columnIndex].textContent.trim().toLowerCase();
 
-        if (!isNaN(parseFloat(a)) && !isNaN(parseFloat(b))) {
-          return ascending
-            ? parseFloat(a) - parseFloat(b)
-            : parseFloat(b) - parseFloat(a);
-        }
+      if (!isNaN(parseFloat(a)) && !isNaN(parseFloat(b))) {
+        return ascending
+          ? parseFloat(a) - parseFloat(b)
+          : parseFloat(b) - parseFloat(a);
+      }
 
-        return ascending ? a.localeCompare(b) : b.localeCompare(a);
-      });
+      return ascending ? a.localeCompare(b) : b.localeCompare(a);
+    });
 
-      rows.forEach(row => table.tBodies[0].appendChild(row));
-      table.setAttribute("data-sort-dir", ascending ? "asc" : "desc");
-    }
-  </script>
+    rows.forEach(row => table.tBodies[0].appendChild(row));
+    table.setAttribute("data-sort-dir", ascending ? "asc" : "desc");
+  }
+</script>
+
         
   <!--Videos-->
 <style>
