@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>SKN+BOD</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"/>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway"
@@ -14,6 +16,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <!-- Internal Styles -->
     <style>
       body,
       h1 {
@@ -22,225 +26,314 @@
       h1 {
         letter-spacing: 6px;
       }
-      .w3-row-padding img {
-        margin-bottom: 0;
-      }
       h2 {
         font-family: "Playfair Display", serif;
-      }
-      h2 {
         letter-spacing: 2px;
+      }
+      .image-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .image-row img {
+        width: 30%;
+        height: auto;
+        cursor: pointer;
+      }
+      .lightbox-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+      }
+      .lightbox-content {
+        background-color: #ccbed3;
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 80%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        text-align: center;
+      }
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #888;
+        cursor: pointer;
+      }
+      .close-btn:hover {
+        color: #333;
       }
     </style>
   </head>
   <body>
-    <!-- PAGE CONTENT -->
+    <!-- Page Content -->
     <div class="w3-content" style="max-width: 100%">
-     <!-- Header -->
-<header class="w3-blue-grey w3-padding w3-large">
-  <!-- Logo -->
-  <div class="w3-center">
-    <h1 class="w3-medium" style="margin-bottom: 25px;">
-      <img src="Images/SB Logo Wht.png" alt="SB Logo" style="width: 20%" />
-    </h1>
-  </div>
+      <!-- Header -->
+      <header class="w3-blue-grey w3-padding w3-large">
+        <div class="w3-center">
+          <h1 class="w3-medium" style="margin-bottom: 25px">
+            <img
+              src="Images/SB Logo Wht.png"
+              alt="SB Logo"
+              style="width: 20%"
+            />
+          </h1>
+        </div>
 
-  <!-- Desktop Navigation -->
-  <div class="w3-bar w3-center w3-hide-small" style="display: flex; justify-content: center; gap: 8px;">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-text-teal">Home</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-hover-text-teal">About</a>
-    <a href="services.html" class="w3-bar-item w3-button w3-hover-text-teal">Services</a>
-    <a href="locations.html" class="w3-bar-item w3-button w3-hover-text-teal">Locations</a>
-    <a href="testimonials.html" class="w3-bar-item w3-button w3-hover-text-teal">Testimonials</a>
-    <a href="shop.html" class="w3-bar-item w3-button w3-text-teal">Shop</a>
-    <i class="fa fa-shopping-cart w3-bar-item w3-button"></i>
-    <i class="fa fa-search w3-bar-item w3-button"></i>
-  </div>
+        <!-- Navigation -->
+        <div
+          class="w3-bar w3-center w3-hide-small"
+          style="display: flex; justify-content: center; gap: 8px"
+        >
+          <a href="index.html" class="w3-bar-item w3-button w3-hover-text-teal"
+            >Home</a
+          >
+          <a href="about.html" class="w3-bar-item w3-button w3-hover-text-teal"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="w3-bar-item w3-button w3-hover-text-teal"
+            >Services</a
+          >
+          <a
+            href="locations.html"
+            class="w3-bar-item w3-button w3-hover-text-teal"
+            >Locations</a
+          >
+          <a
+            href="testimonials.html"
+            class="w3-bar-item w3-button w3-hover-text-teal"
+            >Testimonials</a
+          >
+          <a href="shop.html" class="w3-bar-item w3-button w3-text-teal"
+            >Shop</a
+          >
+          <i class="fa fa-shopping-cart w3-bar-item w3-button"></i>
+          <i class="fa fa-search w3-bar-item w3-button"></i>
+        </div>
 
-  <!-- Hamburger icon (mobile only) -->
-  <div class="w3-hide-medium w3-hide-large w3-center">
-    <button class="w3-button w3-block" onclick="toggleMobileMenu()">
-      <i class="fa fa-bars"></i> Menu
-    </button>
-    <div id="mobileMenu" class="w3-bar-block w3-hide">
-      <a href="index.html" class="w3-bar-item w3-button">Home</a>
-      <a href="about.html" class="w3-bar-item w3-button">About</a>
-      <a href="services.html" class="w3-bar-item w3-button">Services</a>
-      <a href="locations.html" class="w3-bar-item w3-button">Locations</a>
-      <a href="testimonials.html" class="w3-bar-item w3-button">Testimonials</a>
-      <a href="shop.html" class="w3-bar-item w3-button w3-text-teal">Shop</a>
-      <div class="w3-bar-item">
-        <i class="fa fa-shopping-cart w3-margin-right"></i>
-        <i class="fa fa-search"></i>
-      </div>
-    </div>
-  </div>
-</header>
+        <!-- Mobile Nav -->
+        <div class="w3-hide-medium w3-hide-large w3-center">
+          <button class="w3-button w3-block" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i> Menu
+          </button>
+          <div id="mobileMenu" class="w3-bar-block w3-hide">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="about.html" class="w3-bar-item w3-button">About</a>
+            <a href="services.html" class="w3-bar-item w3-button">Services</a>
+            <a href="locations.html" class="w3-bar-item w3-button">Locations</a>
+            <a href="testimonials.html" class="w3-bar-item w3-button"
+              >Testimonials</a
+            >
+            <a href="shop.html" class="w3-bar-item w3-button w3-text-teal"
+              >Shop</a
+            >
+            <div class="w3-bar-item">
+              <i class="fa fa-shopping-cart w3-margin-right"></i>
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <!-- Shop Section -->
-      <div class="w3-container w3-center" style="margin-top: 50px;">
+      <div class="w3-container w3-center" style="margin-top: 50px">
         <h2>Shop</h2>
       </div>
-        <div class="w3-content w3-container w3-padding-64" id="shop">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Two Rows of Images</title>
-              <style>
-                  .image-row {
-                      display: flex;
-                      justify-content: space-between;
-                      margin-bottom: 20px;
-                  }
-                  .image-row img {
-                      width: 30%;
-                      height: auto;
-                  }
-              </style>
-  </head>
-  <body>
-  
-      <div class="image-row">
-          <img src="Images/Moisturzers.jpg" alt="Image 1">
-          <img src="Images/Skin Care.jpg" alt="Image 2">
-          <img src="Images/Serum.jpg" alt="Image 3">
+
+      <!-- Welcome Lightbox -->
+      <div class="lightbox-overlay" id="welcomeLightbox">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('welcomeLightbox')"
+            >&times;</span
+          >
+          <h2>Anti-Aging Medicine + Wellness</h2>
+          <p>
+            Thank you for shopping SKN+BOD!<br />Use code
+            <strong>IAMBEAUTIFUL</strong> for free shipping!
+          </p>
+        </div>
       </div>
-  
-      <div class="image-row">
-          <img src="Images/Homegoods.jpg" alt="Image 4">
-          <img src="Images/Gua Sha.jpg" alt="Image 5">
-          <img src="Images/Bath.jpg" alt="Image 6">
+      <!-- Shop Items -->
+      <div class="w3-content w3-container w3-padding-64" id="shop">
+        <div class="image-row">
+          <img
+            src="Images/Moisturzers.jpg"
+            alt="Image 1"
+            onclick="openLightbox('lightbox1')"
+          />
+          <img
+            src="Images/Skin Care.jpg"
+            alt="Image 2"
+            onclick="openLightbox('lightbox2')"
+          />
+          <img
+            src="Images/Serum.jpg"
+            alt="Image 3"
+            onclick="openLightbox('lightbox3')"
+          />
+        </div>
+
+        <div class="image-row">
+          <img
+            src="Images/Homegoods.jpg"
+            alt="Image 4"
+            onclick="openLightbox('lightbox4')"
+          />
+          <img
+            src="Images/Gua Sha.jpg"
+            alt="Image 5"
+            onclick="openLightbox('lightbox5')"
+          />
+          <img
+            src="Images/Bath.jpg"
+            alt="Image 6"
+            onclick="openLightbox('lightbox6')"
+          />
+        </div>
       </div>
-  
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Auto Lightbox</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
 
-    /* Lightbox overlay */
-    .lightbox-overlay {
-      display: none; /* Hidden by default */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 999;
-      justify-content: center;
-      align-items: center;
-    }
+      <!-- Lightboxes -->
+      <div class="lightbox-overlay" id="lightbox1">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('lightbox1')"
+            >&times;</span
+          >
+          <img
+            src="Images/Moisturzers.jpg"
+            alt="Zoomed 1"
+            style="width: 100%"
+          />
+        </div>
+      </div>
 
-    /* Lightbox content */
-    .lightbox-content {
-      background-color: #ccbed3;
-      padding: 30px;
-      border-radius: 8px;
-      max-width: 500px;
-      width: 80%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      position: relative;
-      text-align: center;
-    }
+      <div class="lightbox-overlay" id="lightbox2">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('lightbox2')"
+            >&times;</span
+          >
+          <img src="Images/Skin Care.jpg" alt="Zoomed 2" style="width: 100%" />
+        </div>
+      </div>
 
-    /* Close button */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #888;
-      cursor: pointer;
-    }
+      <div class="lightbox-overlay" id="lightbox3">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('lightbox3')"
+            >&times;</span
+          >
+          <img src="Images/Serum.jpg" alt="Zoomed 3" style="width: 100%" />
+        </div>
+      </div>
 
-    .close-btn:hover {
-      color: #333;
-    }
-  </style>
-</head>
-<body>
+      <div class="lightbox-overlay" id="lightbox4">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('lightbox4')"
+            >&times;</span
+          >
+          <img src="Images/Homegoods.jpg" alt="Zoomed 4" style="width: 100%" />
+        </div>
+      </div>
 
-  <!-- Lightbox container -->
-  <div class="lightbox-overlay" id="lightbox">
-    <div class="lightbox-content">
-      <span class="close-btn" onclick="closeLightbox()">&times;</span>
-      <h2>Anti-Aging Medicine + Wellness</h2>
-      <p>Thank you for shoppping SKN+BOD! Use code IAMBEAUTIFUL for free shipping!</p>
+      <div class="lightbox-overlay" id="lightbox5">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('lightbox5')"
+            >&times;</span
+          >
+          <img src="Images/Gua Sha.jpg" alt="Zoomed 5" style="width: 100%" />
+        </div>
+      </div>
+
+      <div class="lightbox-overlay" id="lightbox6">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox('lightbox6')"
+            >&times;</span
+          >
+          <img src="Images/Bath.jpg" alt="Zoomed 6" style="width: 100%" />
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-content">
+          <span class="close-btn" onclick="closeLightbox()">&times;</span>
+          <h2>Anti-Aging Medicine + Wellness</h2>
+          <p>
+            Thank you for shopping SKN+BOD! Use code
+            <strong>IAMBEAUTIFUL</strong> for free shipping!
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-32 w3-grey responsive-footer">
+        <div class="footer-section" style="text-align: center">
+          <p>
+            Contact Me: Sally Seashells <br />
+            Email: sally@sknbod.com <br />
+            Phone: 555.505.5555
+          </p>
+        </div>
+
+        <div class="footer-section" style="text-align: center">
+          <i
+            class="fa fa-facebook-official w3-hover-opacity"
+            style="margin-right: 20px"
+          ></i>
+          <i
+            class="fa fa-instagram w3-hover-opacity"
+            style="margin-right: 20px"
+          ></i>
+          <i
+            class="fa fa-envelope w3-hover-opacity"
+            style="margin-right: 20px"
+          ></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        </div>
+
+        <div class="footer-section" style="text-align: center">
+          <p>©2025 SKN+BOD Aesthetics</p>
+        </div>
+      </footer>
     </div>
-  </div>
+    <!-- End of .w3-content -->
 
-  <script>
-    function openLightbox() {
-      document.getElementById("lightbox").style.display = "flex";
-    }
-
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
-
-    // Automatically open the lightbox when the page loads
-    window.onload = function () {
-      openLightbox();
-    };
-
-    // Optional: Close the lightbox if user clicks outside the content
-    window.addEventListener("click", function (e) {
-      const lightbox = document.getElementById("lightbox");
-      if (e.target === lightbox) {
-        closeLightbox();
+    <!-- Scripts -->
+    <script>
+      function openLightbox(id) {
+        document.getElementById(id).style.display = "flex";
       }
-    });
-  </script>
-</body>
-</html>
-
-
- <!-- End Page Content -->
-  </div>
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-grey responsive-footer">
-    <!-- Contact Information -->
-    <div class="footer-section" style="text-align: center;">
-      <p>
-        Contact Me: Sally Seashells <br />
-        Email: sally@sknbod.com <br />
-        Phone: 555.505.5555
-      </p>
-    </div>
-  
-    <!-- Social Media Icons -->
-    <div class="footer-section" style="text-align: center;">
-      <i class="fa fa-facebook-official w3-hover-opacity" style="margin-right: 20px;"></i>
-      <i class="fa fa-instagram w3-hover-opacity" style="margin-right: 20px;"></i>
-      <i class="fa fa-envelope w3-hover-opacity" style="margin-right: 20px;"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    </div>
-  
-    <!-- Copyright -->
-    <div class="footer-section" style="text-align: center;">
-      <p>©2025 SKN+BOD Aesthetics</p>
-    </div>
-  </footer>
-</body>
-<script>
-  function toggleMobileMenu() {
-    const menu = document.getElementById("mobileMenu");
-    if (menu.classList.contains("w3-show")) {
-      menu.classList.remove("w3-show");
-      menu.classList.add("w3-hide");
-    } else {
-      menu.classList.remove("w3-hide");
-      menu.classList.add("w3-show");
-    }
-  }
-</script>
+      function closeLightbox(id) {
+        document.getElementById(id).style.display = "none";
+      }
+      window.addEventListener("click", function (e) {
+        const lightboxes = document.querySelectorAll(".lightbox-overlay");
+        lightboxes.forEach((box) => {
+          if (e.target === box) {
+            box.style.display = "none";
+          }
+        });
+      });
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("w3-show");
+        menu.classList.toggle("w3-hide");
+      }
+      // Show welcome lightbox on page load
+      window.onload = function () {
+        document.getElementById("welcomeLightbox").style.display = "flex";
+      };
+    </script>
+  </body>
 </html>
